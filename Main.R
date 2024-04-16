@@ -1,6 +1,6 @@
 library(tidyverse)
 library(here)
-Marital_tv_hous<-gss_cat %>% group_by(marital) %>% 
+Marital_tv_hous1<-gss_cat %>% group_by(marital) %>% 
   filter(age>70) %>% 
   select(race="White")%>% 
   summarise(mean_tv_hours=mean(tvhours,na.rm=T))
